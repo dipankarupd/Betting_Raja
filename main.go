@@ -19,7 +19,7 @@ func main() {
 	port := os.Getenv("PORT")
 
 	fmt.Println("Starting the server:")
-	log.Fatal(http.ListenAndServe("0.0.0.0"+port, r))
+	log.Fatal(http.ListenAndServe(":"+port, r))
 }
 
 var RegisterGameRoutes = func(router *mux.Router) {
