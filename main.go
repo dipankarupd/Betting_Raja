@@ -17,7 +17,9 @@ func main() {
 	http.Handle("/", r)
 
 	port := os.Getenv("PORT")
-
+	if port == "" {
+		port = "8080"
+	}
 	fmt.Println("Starting the server:")
 	log.Fatal(http.ListenAndServe(":"+port, r))
 }
