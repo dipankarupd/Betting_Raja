@@ -25,6 +25,6 @@ func main() {
 }
 
 var RegisterGameRoutes = func(router *mux.Router) {
-	router.HandleFunc("/games/", controller.PredictWinner).Methods("POST")
-	router.HandleFunc("/games/", controller.GetGames).Methods("GET")
+	router.HandleFunc("/games", controller.PredictWinner).Methods("POST")
+	router.HandleFunc("/games", controller.GetGames).Methods("GET")
 }
